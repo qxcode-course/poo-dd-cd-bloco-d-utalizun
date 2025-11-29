@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-28_01-39-14",
+            "content": "@@ -1,18 +0,0 @@\n-ndsl%C3%A7n%C3%A7anfn%C3%A7snsfa%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-11-28_01-39-34",
+            "content": "@@ -1,15 +1,18 @@\n-r = 10%0Aprint(r)\n+ndsl%C3%A7n%C3%A7anfn%C3%A7snsfa%0A\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-11-28_01-39-48",
+            "content": "@@ -1,78 +1,15 @@\n-class Contact:%0A    def __init__(self, name: str):%0A        def self__name: name\n+r = 10%0Aprint(r)\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-11-29_21-30-05",
+            "content": "@@ -55,381 +55,24 @@\n     \n-self.__name: str = name%0A        self.__favorited: bool = False%0A       \n+def\n  self\n-.\n __\n-fones: list%5BFone%5D %0A    def addFone (self, id: str, number: str):%0A        return%0A    def rmFone(self, index: int):%0A        return%0A    def toogleFavorited():%0A        return %0A    def isFavorited():%0A        return bool%0A    def getFones():%0A        return list%5BFone%5D%0A    def getName():%0A        return str%0A\n+name: name\n",
+            "lines": "3"
+        },
+        {
+            "label": "2025-11-29_21-43-39",
+            "content": "@@ -274,36 +274,32 @@\n toogleFavorited(\n-self\n ):%0A        retur\n@@ -321,20 +321,16 @@\n vorited(\n-self\n ):%0A     \n@@ -361,20 +361,16 @@\n etFones(\n-self\n ):%0A     \n@@ -410,18 +410,9 @@\n ame(\n-self)-%3Estr\n+)\n :%0A  \n@@ -429,142 +429,7 @@\n rn s\n-elf.__name%0A    def setName(self, name: str):%0A        self.__name = name%0A%0Acont: Contact = Contact(%22kkkk%22)%0Acont.setName(%22kaio%22)%0Aprint(cont)\n+tr\n %0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-11-29_21-55-43",
+            "content": "@@ -1,53 +1,190 @@\n-#classe contato%0Aclass Contact:%0A    def __init__(s\n+@@ -1,16 +1,35 @@%0A+@@ -1,89 +1,35 @@%250A-%0A #classe contato%250A%0A@@ -27,17 +27,19 @@%0A  contato%0A-%250A%0A+%25250A%0A class Co%0A@@ -44,17 +44,19 @@%0A Contact:%0A-%250A%0A+%25250A%0A     def %0A@@ -73,33 +73,35 @@%0A \n elf,\n@@ -188,32 +188,45 @@\n lf, name: str):%0A\n+-%250A%0A+%25250A%0A \n         self.__n\n@@ -229,126 +229,377 @@\n .__n\n-ame: str\n+%0A@@ -99,29 +99,95 @@%0A  sel%0A-f.__name%0A+%250A+@@ -510,16 +510,82 @@%25250A %250A f.__name%250A : st%250A@@ -28,802 +28,99 @@%250A name%250A-%0A : str%0A+%250A %0A \n  = name\n+%250A\n %0A     \n-   self.__favorited: bool = False%0A        self.__fones: list%5BFone%5D %0A    def addFone (self, id: st\n+%0A@@ -178,24 +178,28 @@%0A tr%250A  = name%250A%0A+-%25250A%0A         self%0A@@ -224,17 +224,19 @@%0A  = False%0A-%250A%0A+%25250A%0A         %0A@@ -257,16 +257,22 @@%0A list%0A-%255B%0A+%25255B%0A Fone%0A-%255D %250A%0A+%25255D %25250A%0A     %0A@@ -304,33 +304,35 @@%0A \n r, n\n@@ -603,32 +603,45 @@\n , number: str):%0A\n+-%250A%0A+%25250A%0A \n         return%0A \n@@ -642,72 +642,214 @@\n turn\n-%0A    def rmFone(self, index: int):%0A        return%0A    def toogle\n+%250A %0A@@ -321,33 +321,35 @@%0A 0A        return%0A-%250A%0A+%25250A%0A     def rmFone(s%0A@@ -365,17 +365,19 @@%0A x: int):%0A-%250A%0A+%25250A%0A         %0A@@ -382,17 +382,19 @@%0A   return%0A-%250A%0A+%25250A%0A     def %0A@@ -407,33 +407,35 @@%0A \n Favo\n@@ -853,32 +853,45 @@\n avorited(self):%0A\n+-%250A%0A+%25250A%0A \n         return %0A\n@@ -889,27 +889,97 @@\n  return \n-%0A    def is\n+%250A%0A@@ -433,17 +433,19 @@%0A  return %0A-%250A%0A+%25250A%0A     def %0A@@ -454,33 +454,35 @@%0A \n Favorite\n@@ -979,32 +979,45 @@\n avorited(self):%0A\n+-%250A%0A+%25250A%0A \n         return b\n@@ -1020,516 +1020,1483 @@\n rn b\n-ool%0A    def getFones(self):%0A        return list%5BFone%5D%0A    def getName(self)-%3Estr:%0A        return self.__name%0A    def setName(self, name: str):%0A        self.__name = name%0A    def __str__(self):%0A        return%0A#fim de contato%0A%0A#classe Fone%0Aclass Fone:%0A    def __init__(self, id: str, number: str):%0A        self.__id: str = id%0A        self.__number: str = number%0A    def isValid(self):%0A        return bool%0A    def getId():%0A        return str%0A    def getNumber(self):%0A        return str%0A        %0A%0A#fim da classe fone\n+%0A@@ -476,33 +476,35 @@%0A      return bool%0A-%250A%0A+%25250A%0A     def getFones%0A@@ -506,25 +506,27 @@%0A Fones(self):%0A-%250A%0A+%25250A%0A         retu%0A@@ -536,15 +536,21 @@%0A list%0A-%255B%0A+%25255B%0A Fone%0A-%255D%250A%0A+%25255D%25250A%0A     %0A@@ -571,14 +571,18 @@%0A lf)-%0A-%253E%0A+%25253E%0A str:%0A-%250A%0A+%25250A%0A     %0A@@ -599,25 +599,27 @@%0A  self.__name%0A-%250A%0A+%25250A%0A     def setN%0A@@ -635,25 +635,27 @@%0A  name: str):%0A-%250A%0A+%25250A%0A         self%0A@@ -668,17 +668,19 @@%0A e = name%0A-%250A%0A+%25250A%0A     def %0A@@ -689,25 +689,27 @@%0A str__(self):%0A-%250A%0A+%25250A%0A         retu%0A@@ -710,17 +710,19 @@%0A   return%0A-%250A%0A+%25250A%0A #fim de %0A@@ -728,18 +728,22 @@%0A  contato%0A-%250A%250A%0A+%25250A%25250A%0A #classe %0A@@ -746,17 +746,19 @@%0A sse Fone%0A-%250A%0A+%25250A%0A class Fo%0A@@ -760,17 +760,19 @@%0A ss Fone:%0A-%250A%0A+%25250A%0A     def %0A@@ -808,17 +808,19 @@%0A r: str):%0A-%250A%0A+%25250A%0A         %0A@@ -838,17 +838,19 @@%0A str = id%0A-%250A%0A+%25250A%0A         %0A@@ -876,17 +876,19 @@%0A = number%0A-%250A%0A+%25250A%0A     def %0A@@ -897,25 +897,27 @@%0A Valid(self):%0A-%250A%0A+%25250A%0A         retu%0A@@ -923,17 +923,19 @@%0A urn bool%0A-%250A%0A+%25250A%0A     def %0A@@ -942,17 +942,19 @@%0A getId():%0A-%250A%0A+%25250A%0A         %0A@@ -959,25 +959,27 @@%0A   return str%0A-%250A%0A+%25250A%0A     def getN%0A@@ -990,17 +990,19 @@%0A r(self):%0A-%250A%0A+%25250A%0A         %0A@@ -1015,17 +1015,19 @@%0A  str%0A-%250A%0A+%25250A%0A         %0A %250A%250A#f%0A@@ -1026,10 +1026,14 @@%0A     %0A-%250A%250A%0A+%25250A%25250A%0A #fim%0A@@ -1043,12 +1043,125 @@%0A  classe fone%0A+%250A+%2525250A%25250A+%2525250Acont: Contact = Contact(%25252522kkkk%25252522)%2525250Acont.setName(%25252522kaio%25252522)%2525250Aprint(cont)%2525250A%25250A%250A%0A\n",
+            "lines": "198"
+        },
+        {
+            "label": "2025-11-29_22-23-50",
+            "content": "#classe contato\nclass Contact:\n    def __init__(self, name: str):\n        self.__name: str = name\n        self.__favorited: bool = False\n        self.__fones: list[Fone] \n    def addFone (self, id: str, number: str):\n        return\n    def rmFone(self, index: int):\n        return\n    def toogleFavorited(self):\n        return \n    def isFavorited(self):\n        return bool\n    def getFones(self):\n        return list[Fone]\n    def getName(self)->str:\n        return self.__name\n    def setName(self, name: str):\n        self.__name = name\n    def __str__(self):\n        return\n#fim de contato\n\n#classe Fone\nclass Fone:\n    def __init__(self, id: str, number: str):\n        self.__id: str = id\n        self.__number: str = number\n    def isValid(self):\n        return bool\n    def getId():\n        return str\n    def getNumber(self):\n        return str\n        \n\n#fim da classe fone",
+            "lines": "38"
+        }
+    ]
+}
