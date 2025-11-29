@@ -37,3 +37,34 @@ class Fone:
         return
 #fim da classe fone
 
+#classe Agenda
+class Agenda:
+    def __init__(self):
+        self.__contacts:str = list[Contact]
+    def _PosByName(self, name: str) -> int:
+        return
+    def __str__(self):
+        return
+    def addContact(self, name: str, fones: list[Fone]):
+        return
+    def getContact(self, name: str) -> Contact | None:
+        return
+    def rmContact(self, name: str):
+        return
+    def search(self, pattern: str) -> list[Contact]:
+        return
+    def getFavorite(self) -> list[Contact]:
+        return
+    def getContacts(self) -> list[Contact]:
+        return
+#fim da classe Agenda 
+
+#main
+def main():
+    agenda: Agenda = Agenda()
+    while True:
+        line: str = input()
+        args: list[str] = line.split(' ')
+        print(f'${line}')
+    main()
+#fim da main
