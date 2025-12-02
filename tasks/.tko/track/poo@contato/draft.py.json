@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-01_14-24-18",
+            "content": "@@ -167,13 +167,8 @@\n ne%5D \n-= %5B%5D%0A\n %0A   \n@@ -217,37 +217,32 @@\n %0A        return%0A\n-    %0A\n     def rmFone(s\n@@ -274,21 +274,16 @@\n  return%0A\n-    %0A\n     def \n@@ -321,21 +321,16 @@\n return %0A\n-    %0A\n     def \n@@ -368,21 +368,16 @@\n rn bool%0A\n-    %0A\n     def \n@@ -418,21 +418,16 @@\n t%5BFone%5D%0A\n-    %0A\n     def \n@@ -473,21 +473,16 @@\n .__name%0A\n-    %0A\n     def \n@@ -534,17 +534,16 @@\n  = name%0A\n-%0A\n     def \n@@ -549,32 +549,32 @@\n  __str__(self):%0A\n+\n         return%0A \n@@ -576,13 +576,8 @@\n urn%0A\n-    %0A\n #fim\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-12-01_14-44-06",
+            "content": "@@ -196,54 +196,45 @@\n lf, \n-fone: Fone):%0A        self.__fones.append(fone)\n+id: str, number: str):%0A        return\n %0A   \n@@ -281,78 +281,14 @@\n     \n-if 0 %3C= index %3C len(self.__fones):%0A            self.__fones.pop(index)\n+return\n %0A   \n@@ -332,47 +332,15 @@\n     \n-self.__favorited = not self.__favorited\n+return \n %0A   \n@@ -362,32 +362,24 @@\n orited(self)\n- -%3E bool\n :%0A        re\n@@ -383,32 +383,20 @@\n  return \n-self.__favorited\n+bool\n %0A    %0A  \n@@ -432,28 +432,26 @@\n  return \n-self.__fones\n+list%5BFone%5D\n %0A    %0A  \n@@ -469,20 +469,18 @@\n me(self)\n- \n -%3E\n- \n str:%0A   \n@@ -605,117 +605,14 @@\n     \n-foneStrList = %5Bstr(fone) for fone in self.__fones%5D%0A        return f%22%7Bself.__name%7D %5B%7B%22, %22.join(foneStrList)%7D%5D%22\n+return\n %0A   \n@@ -1013,17 +1013,16 @@\n se fone%0A\n-%0A\n #main%0Ade\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-12-01_16-47-33",
+            "content": "@@ -1272,34 +1272,31 @@\n     \n-contato: Contact = Contact\n+agenda: Agenda = Agenda\n ()%0A \n@@ -1380,16 +1380,16 @@\n it(' ')%0A\n+\n         \n@@ -1409,97 +1409,8 @@\n e%7D')\n-%0A%0A        if args%5B0%5D == %22init%22:%0A            New = args%5B1%5D%0A            novoContato = %5BNew%5D\n %0A   \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-12-01_17-24-12",
+            "content": "#classe contato\nclass Contact:\n    def __init__(self, name: str):\n        self.__name: str = name\n        self.__favorited: bool = False\n        self.__fones: list[Fone] = []\n\n    def addFone (self, fone: Fone):\n        self.__fones.append(fone)\n    \n    def rmFone(self, index: int):\n        if 0 <= index < len(self.__fones):\n            self.__fones.pop(index)\n    \n    def toogleFavorited(self):\n        self.__favorited = not self.__favorited\n    \n    def isFavorited(self) -> bool:\n        return self.__favorited\n    \n    def getFones(self):\n        return self.__fones\n    \n    def getName(self) -> str:\n        return self.__name\n    \n    def setName(self, name: str):\n        self.__name = name\n\n    def __str__(self):\n        foneStrList = [str(fone) for fone in self.__fones]\n        return f\"{self.__name} [{\", \".join(foneStrList)}]\"\n    \n#fim de contato\n\n#classe Fone\nclass Fone:\n    def __init__(self, id: str, number: str):\n        self.__id: str = id\n        self.__number: str = number\n    def isValid(self) -> bool:\n        return True\n    def getId() -> str:\n        return self.__id\n    def getNumber(self)->str:\n        return self.__number\n    def __str__(self):\n        return f\"{self.__id}:{self.__number}\"\n#fim da classe fone\n\n#main\ndef main():\n    contato: Contact = Contact()\n    while True:\n        line: str = input()\n        args: list[str] = line.split(' ')\n        print(f'${line}')\n\n        if args[0] == \"init\":\n            New = args[1]\n            novoContato = [New]\n    main()\n#fim da main",
+            "lines": "63"
+        }
+    ]
+}
