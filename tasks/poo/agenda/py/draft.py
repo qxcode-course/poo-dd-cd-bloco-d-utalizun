@@ -75,25 +75,34 @@ class Agenda:
             contact.addFone(fone)
         self.__contacts.append(contact)
     
-    def getContacts(self, name: str) -> list[Contact]:
+    def getContacts(self) -> list[Contact]:
         return sorted(self.__contacts, key=lambda contact: contact.getName())
     
     def rmContact(self, name: str):
         index = self.PosByName(name)
-        if index == -1:
+        if index != -1:
             self.__contacts.pop(index)
 
-    def search(self, pattern: str) -> list[Contact]:
+    def search(self, pattern: str) -> str:
         result = []
         for contact in self.getContacts():
             if pattern in str(contact):
                 result.append("- "+ str(contact))
-                return "\n".join(result)
+        return "\n".join(result)
             
     
-    def getFavorite(self) -> list[Contact]:
-        return
+    def getFavorited(self) -> list[Contact]:
+        result = []
+        for contact in self.getContacts():
+            if contact.isFavorited():
+                result.append(contact)
+        return result
     
+    def favoriteContact(self, name: str):
+        contact = self.getContact(name)
+        if contact is not None:
+            contact.toogleFavorited()
+
     def getContact(self, name: str) -> None:
         index = self.PosByName(name)
         if index == -1:
@@ -102,12 +111,11 @@ class Agenda:
     
     def __str__(self):
         result = []
-        for contact in self.getContact():
-            mark = "@" if contact.isFavorited() else "- "
+        for contact in self.getContacts():
+            mark = "@ " if contact.isFavorited() else "- "
             result.append(mark + str(contact))
-            return "\n".join(result)
+        return "\n".join(result)
 
-    
 def buildFoneStr(foneStr: str) -> Fone:
         id, number = foneStr.split(":")
         return Fone(id,number)
@@ -145,8 +153,21 @@ def main():
             contact = agenda.getContact(name)
             if contact:
                 contact.rmFone(index)
+        
+        elif args[0] == "rm":
+            name = args[1]
             agenda.rmContact(name)
-            agenda.addContact(contact.getName(), contact.getFones())
+        elif args[0] =="search":
+            pattern = args [1]
+            print(agenda.search(pattern))
+        elif args [0] == "tfav":
+            name = args[1]
+            agenda.favoriteContact(name)
+        elif args [0] == "favs":
+            favs = agenda.getFavorited()
+            print("\n".join(f"@ {str(fav)}" for fav in favs))
+        else:
+            print("fail: comando invalido")
 
 if __name__ == "__main__":
     main()
